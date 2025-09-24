@@ -1,0 +1,271 @@
+
+:root{
+  --page-w: 86%;
+  --page-h: 92%;
+  --gap: 18px;
+  --page-bg: none;
+  --panel-bg: #3b3b3b;
+  --radius: 10px;
+}
+
+/* базовый центр и фон */
+html,body{height:100%;margin:0;font-family:Arial, sans-serif;background:#111;}
+body{display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;}
+
+/* сама "страница" фиксированного размера */
+.page{
+  width:var(--page-w);
+  height:var(--page-h);
+  background:var(--page-bg);
+  border-radius:calc(var(--radius) + 4px);
+  padding:var(--gap);
+  box-sizing:border-box;
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns: 1fr 2fr 1fr; /* по умолчанию */
+  min-width:0; min-height:0;
+  /* box-shadow: 0 6px 30px rgba(0,0,0,0.6); */
+}
+
+/* адаптивная логика по наличию колонок (использует :has()) */
+.page:has(.left):has(.center):has(.right) { grid-template-columns: 1fr 2fr 1fr; }
+.page:has(.left):has(.center):not(:has(.right)) { grid-template-columns: 1fr 3fr; }
+.page:not(:has(.left)):has(.center):has(.right) { grid-template-columns: 3fr 1fr; }
+.page:has(.center):not(:has(.left)):not(:has(.right)) { grid-template-columns: 1fr; }
+.page:not(:has(.center)):has(.left):has(.right) { grid-template-columns: 1fr 1fr; }
+
+/* назначение колонок (для grid) */
+.left  { grid-column: 1 / 2; min-width:0; min-height:0; }
+.center{ grid-column: 2 / 3; min-width:0; min-height:0; }
+.right { grid-column: 3 / 4; min-width:0; min-height:0; }
+
+/* --- КОЛОНКИ: поведение левой/правой --- */
+/* Колонки—flex-колонки, но сами НЕ дают внешнего скролла (overflow: hidden).
+   Вся логика скролла — внутри отдельных .box. */
+.left, .right {
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap);
+  align-items:stretch;
+  min-width:0;
+  min-height:0;
+  overflow:hidden; /* важный момент: колонка не должна "выползать" за page */
+  padding:0;
+}
+
+/* --- Дочерние .box в left/right: равномерно делят высоту колонки --- */
+/* flex:1 1 0 — позволяет им уменьшаться, чтобы все были видны */
+.left .box,
+.right .box {
+  flex: 1 1 0;      /* все .box равномерно делят высоту колонки */
+  min-height: 0;    /* важно для корректной работы overflow внутри flex */
+  overflow: auto;   /* если внутренняя часть слишком большая — появляется скролл у самого .box */
+  /* padding:16px; */
+  box-sizing:border-box;
+  background:var(--panel-bg);
+  border-radius:var(--radius);
+  color:#eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* .box_full — занимает чуть больше места, но не скрывает другие */
+.box_full {
+  flex: 2 1 0; /* занимает в 2 раза больше пространства, чем обычный .box */
+  min-height: 0;
+  overflow:auto;
+}
+
+/* --- Центр: один .box растягивается на весь центр --- */
+.center {
+  display:flex;
+  flex-direction:column;
+  min-width:0; min-height:0;
+}
+.center .box {
+  flex: 1 1 0;
+  min-height:0;
+  overflow:auto;
+  /* padding:18px; */
+  box-sizing:border-box;
+  background:var(--panel-bg);
+  border-radius:var(--radius);
+  color:#eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* Если в центре несколько .box — они тоже равномерно поделят высоту (flex:1). */
+
+/* фиксированный блок — не растёт и занимает ровно высоту переменной */
+.box_fixed {
+  /* не растём, не сжимаемся (фиксируем базовую высоту) */
+  flex: 0 0 var(--box-fixed-height, 80px);
+  height: var(--box-fixed-height, 80px);
+  min-height: 0;   /* важно для корректного поведения в flex */
+  max-height: var(--box-fixed-max-height, none);
+  overflow: auto;  /* внутр. скролл, если контента больше */
+  padding:16px;
+  box-sizing:border-box;
+  background:var(--panel-bg);
+  border-radius:var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* удобные пресеты — можно применять вместо явного переопределения переменной */
+.box_fixed--sm { --box-fixed-height: 56px; }
+.box_fixed--md { --box-fixed-height: 80px; }
+.box_fixed--lg { --box-fixed-height: 120px; }
+
+/* пример: если нужен фиксированный шире/в ширину (редко для вертикального стека) */
+.box_fixed_width {
+  flex: 0 0 auto; /* не даём блоку тянуться по высоте */
+  width: var(--box-fixed-width, 100%); /* управляем через переменную */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.image_content {
+  max-width: 100%;
+}
+
+.image_50 {
+  width: 50%;
+}
+
+.image_128x {
+  width: 128px;
+}
+
+.content_main {
+  display: grid;
+  grid-template-areas: "content_left content_right";
+}
+
+.content_left {
+  grid-area: content_left;
+  margin-right: 16px;
+}
+
+.content_right {
+  grid-area: content_right;
+}
+
+/* Небольшая адаптация под мелкие экраны */
+@media (max-width:900px){
+  .page{ width: calc(100% - 40px); height: calc(100vh - 40px); grid-template-columns:1fr; padding:12px; }
+  .left,.center,.right{ width:100%; height:auto; overflow:visible; }
+  .left .box, .right .box { flex: 0 0 auto; min-height: 120px; }
+}
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .box {
+        position: relative;
+    }
+
+    .bg-black {background-color: #181818;}
+    .bg-gray_light {background-color: #474747;}
+    .bg-gray_dark {background-color: #383838;}
+    .bg-white {background-color: #F2F2F2;}
+    .bg-green {background-color: #79AF6B;}
+    .bg-green_light {background-color: #96DB85;}
+    .bg-red {background-color: #96453f;}
+    .bg-blue {background-color: #337070;}
+
+    .black {color: #181818;}
+    .gray_light {color: #474747;}
+    .gray_dark {color: #383838;}
+    .white {color: #F2F2F2;}
+    .green {color: #79AF6B;}
+    .green_light {color: #96DB85;}
+    .red {color: #d15e56;}
+    .yellow {color: #d1c956;}
+
+    * {
+        font: 18px "Inter";
+    }
+
+    .box .inter, .inter_black, .inter_extra, .inter_light {
+        padding-bottom: 8px;
+    }
+
+    /* .box p {
+        padding-bottom: 32x;
+    } */
+
+    .inter {font: 18px "Inter";}
+    .inter_black {font: 48px "Inter"; font-weight: 900;}
+    .inter_extra {font: 22px "Inter"; font-weight: 800;}
+    .inter_light {font: 14px "Inter"; font-weight: 300;}
+
+    .link {
+        color: #7cd4d4;
+    }
+
+    .top {
+        width: 100%;
+        font: 48px "Inter"; font-weight: 900;
+        background-color: #79AF6B;
+        padding: 16px;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px;
+        padding-left: 86px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .button {
+        background-color: #212121;
+        border: 0;
+        border-radius: 4px;
+        padding: 8px;
+        color: #F2F2F2;
+        transition: 0.15s;
+    }
+
+    .button:hover {
+        background-color: #2c2c2c;
+        transition: 0.15s;
+    }
+
+    .button:active {
+        background-color: #444444;
+        transition: 0.15s;
+    }
+
+    .component {
+        padding-bottom: 24px;
+    }
+
+    .textarea_full {
+        width: 100%;
+    }
+    .textarea_big {
+        height: 16rem;
+    }
+
+@media (min-width: 1080px) {
+    .inter {font: 16px "Inter";}
+    .inter_black {font: 36px "Inter"; font-weight: 900;}
+    .inter_extra {font: 20px "Inter"; font-weight: 800;}
+    .inter_light {font: 14px "Inter"; font-weight: 300;}
+
+    .top {
+        width: 100%;
+        font: 36px "Inter"; font-weight: 900;
+        background-color: #79AF6B;
+        padding: 16px;
+    }
+}

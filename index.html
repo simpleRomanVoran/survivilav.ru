@@ -7,7 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Переменные -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <!-- Очистка стилей -->
+    <link rel="stylesheet" href="styles/clear.css">
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- Контейнеры -->
+    <link rel="stylesheet" href="styles/containers.css">
+    <!-- Медиа-запросы -->
+    <link rel="stylesheet" href="styles/media.css">
+
+
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body class="body">
@@ -66,7 +78,7 @@
                     БЛОГИ
                 </div>
                 <div class="content">
-                    <p class="inter_extra">Вступление</p>
+                    <p class="text_extra">Вступление</p>
                     <p class="text">Страница создана: <span class="yellow">22.09.2025</span></p>
                     <p class="text">
                         Сейчас Сурвивилав переживает не самое лучшее время. Игроков мало, контента тоже, хостинги, постоянные вайпы и проблемы усложняют процесс игры.
@@ -81,7 +93,7 @@
                         Начался Сурвивилав не с меня, отцом основателем стал игрок под ником SDkY_ - создатель нескольких сборок и основной владелец проектом,
                         Начался проект ещё на старой 1.12.2, с последующим переходом на 1.14.4 и так далее, сейчас мы поддерживаем самую последнюю версию игры.
                     </p>
-                    <p class="inter_extra">О Будущем проекта</p>
+                    <p class="text_extra">О Будущем проекта</p>
                     <p class="text">
                         В моём представлении "Сурвивилав" должен оставаться приватным, а так же должен иметь не только выживание, но и "особые режимы". Мне интересно
                         создать такую систему, при которой игроки будут сами создавать "Режимы" с удобными инструментами, будь то "мини-игры", "выживание", "рп" и прочее.
@@ -103,7 +115,7 @@
                         администрации/модерации, что бы не было очевидных проблем, так же будут правила взаимодействия между группами.
                     </p>
 
-                    <p class="inter_extra">О прошлом и заключение</p>
+                    <p class="text_extra">О прошлом и заключение</p>
 
                     <p class="text">
                         Сервер пережил несколько сезонов, в том числе и вынужденных: survivilav Neo, survivilav Bridge, survivilav 1.12.2 и 1.14.4 и
@@ -138,11 +150,11 @@
     </div>
 
     <div class="fixed white bg-red" id="fixed">
-        <div class="inter_black">ОШИБКА!</div>
-        <div class="inter" id="error_msg"></div>
+        <div class="text_black">ОШИБКА!</div>
+        <div class="text" id="error_msg"></div>
         <div class="button button_exit_fixed" onclick="managerPopup.hide ('fixed')">Понял</div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

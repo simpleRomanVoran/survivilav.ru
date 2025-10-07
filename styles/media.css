@@ -1,0 +1,21 @@
+/* Небольшая адаптация под мелкие экраны */
+@media (max-width:900px){
+  .page{ width: calc(100% - 40px); height: calc(100vh - 40px); grid-template-columns:1fr; padding:12px; }
+  .left,.center,.right{ width:100%; height:auto; overflow:visible; }
+  .left .box, .right .box { flex: 0 0 auto; min-height: 120px; }
+}
+
+/* Адаптив для верхней части */
+@media (min-width: 1080px) {
+    .inter {font: 16px "Inter";}
+    .inter_black {font: 36px "Inter"; font-weight: 900;}
+    .inter_extra {font: 20px "Inter"; font-weight: 800;}
+    .inter_light {font: 14px "Inter"; font-weight: 300;}
+
+    .top {
+        width: 100%;
+        font: 36px "Inter"; font-weight: 900;
+        background-color: #79AF6B;
+        padding: 16px;
+    }
+}

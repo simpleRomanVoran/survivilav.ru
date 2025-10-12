@@ -20,6 +20,91 @@ body {
     box-sizing: border-box;
 }
 
+/* КАСТОМНЫЕ СПИСКИ */
+/* CSS — работает поверх reset.css (убираем стандартные маркеры) */
+.custom-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Общая отступная колонка для маркера */
+.custom-list > li {
+  position: relative;
+  padding-left: 1.1rem;        /* пространство для маркера */
+  margin: .38rem 0;            /* невысокие интервалы между пунктами */
+  line-height: 1.35;
+  font-size: 0.98rem;
+}
+
+/* ------------------------
+   Треугольник (по умолчанию слева, указывает на текст)
+   Включается классом .marker-triangle на <ul>
+   ------------------------ */
+.marker-triangle > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  /* треугольник направлен вправо: границы сверху/снизу прозрачны, справа прозрачный, слева цветной */
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--marker-color, #3411f1);
+  /* лёгкая тень для читаемости */
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.15));
+}
+
+/* уменьшенный вариант для мобильных/компактных списков */
+.custom-list.compact > li {
+  padding-left: .9rem;
+}
+.custom-list.compact.marker-triangle > li::before {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 8px;
+}
+
+/* ------------------------
+   Круглая точка
+   Включается классом .marker-dot на <ul>
+   ------------------------ */
+.marker-dot > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--marker-color, #f10033);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset;
+}
+
+/* компактная точка */
+.custom-list.compact.marker-dot > li::before {
+  width: 6px;
+  height: 6px;
+}
+
+/* ------------------------
+   Цвета бренда: две опции
+   Можно добавить другие через переменные CSS
+   ------------------------ */
+.brand-violet { --marker-color: #3411f1; }
+.brand-red    { --marker-color: #f10033; }
+
+/* Дополнительно: фокус/акцент (например, при hover на li) */
+.custom-list > li:hover { background: rgba(255,255,255,0.01); border-radius:6px; }
+
+/* Адаптив: если место мало — уменьшить отступ */
+@media (max-width: 420px) {
+  .custom-list > li { padding-left: .9rem; }
+}
+
 
 
 /* ИЗОБРАЖЕНИЯ */
@@ -57,6 +142,16 @@ body {
 .box {
     position: relative;
 }
+
+.block {
+    display: block;
+}
+
+.full {
+    width: 100%;
+}
+
+
 
 
 
@@ -146,11 +241,15 @@ body {
     padding: 16px;
 }
 
+
+
 /* Оформление основного контента */
 
 .content {
     padding: 16px;
 }
+
+
 
 /* Позиция фиксированный fixed */
 
@@ -179,6 +278,7 @@ body {
     padding: 8px;
     color: #F2F2F2;
     transition: 0.15s;
+    margin-bottom: 8px;
 }
 
 .button:hover {
@@ -187,15 +287,20 @@ body {
 }
 
 .button:active {
-    background-color: #444444;
+    background-color: #79AF6B; /* #444444; */
+    color: #212121;
     transition: 0.15s;
 }
+
+
 
 /* Компоненты - более большие отступы */
 
 .component {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
+
+
 
 /* Текстовые поля (зоны) */
 
@@ -207,6 +312,17 @@ body {
     height: 16rem;
 }
 
+.input {
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.input:last-child {
+    margin-bottom: 0;
+}
+
+
+
 /* Доп. отступы */
 
 .box .inter,
@@ -215,6 +331,8 @@ body {
 .inter_light {
     padding-bottom: 8px;
 }
+
+
 
 /* Текст */
 
@@ -243,4 +361,8 @@ body {
     font: 14px "Inter";
     font-weight: 300;
     padding-bottom: 1rem;
+}
+
+.text_center {
+    text-align: center;
 }

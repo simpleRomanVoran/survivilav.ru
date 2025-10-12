@@ -1,0 +1,17 @@
+[20:13:22] [INFO] [main] Запуск Survivilav API...
+[20:13:22] [INFO] [uvicorn.error] Will watch for changes in these directories: ['G:\\projects\\survivilav_go\\website\\survivilav.ru']
+[20:13:22] [INFO] [uvicorn.error] Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[20:13:22] [INFO] [uvicorn.error] Started reloader process [2904] using StatReload
+[20:13:22] [DEBUG] [asyncio] Using selector: SelectSelector
+[20:13:23] [INFO] [uvicorn.error] Started server process [27244]
+[20:13:23] [INFO] [uvicorn.error] Waiting for application startup.
+[20:13:23] [INFO] [uvicorn.error] Application startup complete.
+[20:13:30] [INFO] [uvicorn.access] 127.0.0.1:63855 - "GET /api/invite/create HTTP/1.1" 405
+[20:13:30] [INFO] [uvicorn.access] 127.0.0.1:63856 - "GET /favicon.ico HTTP/1.1" 404
+[20:13:31] [INFO] [uvicorn.access] 127.0.0.1:63855 - "GET /api/invite/create HTTP/1.1" 405
+[20:13:31] [INFO] [uvicorn.access] 127.0.0.1:63856 - "GET /favicon.ico HTTP/1.1" 404
+[20:16:34] [INFO] [uvicorn.error] Shutting down
+[20:16:34] [INFO] [uvicorn.error] Waiting for application shutdown.
+[20:16:34] [INFO] [uvicorn.error] Application shutdown complete.
+[20:16:34] [INFO] [uvicorn.error] Finished server process [27244]
+[20:16:34] [INFO] [uvicorn.error] Stopping reloader process [2904]

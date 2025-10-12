@@ -1,0 +1,13 @@
+[19:37:11] [INFO] [main] Запуск Survivilav API...
+[19:37:11] [INFO] [uvicorn.error] Will watch for changes in these directories: ['G:\\projects\\survivilav_go\\website\\survivilav.ru']
+[19:37:11] [INFO] [uvicorn.error] Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[19:37:11] [INFO] [uvicorn.error] Started reloader process [27528] using StatReload
+[19:37:11] [DEBUG] [asyncio] Using selector: SelectSelector
+[19:37:11] [INFO] [uvicorn.error] Started server process [27764]
+[19:37:11] [INFO] [uvicorn.error] Waiting for application startup.
+[19:37:11] [INFO] [uvicorn.error] Application startup complete.
+[19:38:18] [INFO] [uvicorn.error] Shutting down
+[19:38:18] [INFO] [uvicorn.error] Waiting for application shutdown.
+[19:38:18] [INFO] [uvicorn.error] Application shutdown complete.
+[19:38:18] [INFO] [uvicorn.error] Finished server process [27764]
+[19:38:18] [INFO] [uvicorn.error] Stopping reloader process [27528]

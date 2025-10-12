@@ -1,0 +1,58 @@
+[19:38:20] [DEBUG] [asyncio] Using selector: SelectSelector
+[19:38:20] [INFO] [uvicorn.error] Started server process [28444]
+[19:38:20] [INFO] [uvicorn.error] Waiting for application startup.
+[19:38:20] [INFO] [uvicorn.error] Application startup complete.
+[19:38:35] [WARNING] [uvicorn.error] Invalid HTTP request received.
+[19:38:35] [WARNING] [uvicorn.error] Invalid HTTP request received.
+[19:39:00] [INFO] [main] Пинг сервера получен
+[19:39:00] [INFO] [uvicorn.access] 127.0.0.1:50595 - "GET /api/ping HTTP/1.1" 200
+[19:39:00] [INFO] [uvicorn.access] 127.0.0.1:50596 - "GET /favicon.ico HTTP/1.1" 404
+[19:39:08] [INFO] [uvicorn.access] 127.0.0.1:50597 - "GET / HTTP/1.1" 404
+[19:39:08] [INFO] [uvicorn.access] 127.0.0.1:50598 - "GET /favicon.ico HTTP/1.1" 404
+[19:39:17] [INFO] [uvicorn.access] 127.0.0.1:50599 - "GET /admin HTTP/1.1" 404
+[19:39:17] [INFO] [uvicorn.access] 127.0.0.1:50600 - "GET /favicon.ico HTTP/1.1" 404
+[19:40:04] [INFO] [uvicorn.access] 127.0.0.1:50607 - "OPTIONS /api/request HTTP/1.1" 200
+[19:40:04] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 1
+[19:40:04] [INFO] [main] Заявка от 1 сохранена.
+[19:40:04] [INFO] [uvicorn.access] 127.0.0.1:50607 - "POST /api/request HTTP/1.1" 200
+[19:40:31] [INFO] [main] Попытка отмены заявки: 1
+[19:40:31] [INFO] [main] Заявка 1 удалена.
+[19:40:31] [INFO] [uvicorn.access] 127.0.0.1:50618 - "POST /api/cancel?nickname=1 HTTP/1.1" 200
+[19:40:35] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 1
+[19:40:35] [INFO] [main] Заявка от 1 сохранена.
+[19:40:35] [INFO] [uvicorn.access] 127.0.0.1:50618 - "POST /api/request HTTP/1.1" 200
+[19:40:46] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 124
+[19:40:46] [WARNING] [main] Попытка повторной заявки с IP 127.0.0.1
+[19:40:46] [INFO] [uvicorn.access] 127.0.0.1:50629 - "POST /api/request HTTP/1.1" 400
+[19:41:11] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 124
+[19:41:11] [WARNING] [main] Попытка повторной заявки с IP 127.0.0.1
+[19:41:11] [INFO] [uvicorn.access] 127.0.0.1:50638 - "POST /api/request HTTP/1.1" 400
+[20:00:37] [INFO] [main] Попытка отмены заявки: 1243457
+[20:00:37] [WARNING] [main] Не найден пользователь 1243457 для удаления.
+[20:00:37] [INFO] [uvicorn.access] 127.0.0.1:63579 - "POST /api/cancel?nickname=1243457 HTTP/1.1" 404
+[20:01:39] [INFO] [main] Попытка отмены заявки: 1243457
+[20:01:39] [WARNING] [main] Не найден пользователь 1243457 для удаления.
+[20:01:39] [INFO] [uvicorn.access] 127.0.0.1:63593 - "POST /api/cancel?nickname=1243457 HTTP/1.1" 404
+[20:01:51] [INFO] [main] Попытка отмены заявки: 1243457
+[20:01:51] [WARNING] [main] Не найден пользователь 1243457 для удаления.
+[20:01:51] [INFO] [uvicorn.access] 127.0.0.1:63603 - "POST /api/cancel?nickname=1243457 HTTP/1.1" 404
+[20:02:16] [INFO] [uvicorn.access] 127.0.0.1:63612 - "OPTIONS /api/request HTTP/1.1" 200
+[20:02:16] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 1243457
+[20:02:16] [WARNING] [main] Попытка повторной заявки с IP 127.0.0.1
+[20:02:16] [INFO] [uvicorn.access] 127.0.0.1:63612 - "POST /api/request HTTP/1.1" 400
+[20:04:17] [INFO] [main] Попытка отмены заявки: 1243457
+[20:04:17] [WARNING] [main] Не найден пользователь 1243457 для удаления.
+[20:04:17] [INFO] [uvicorn.access] 127.0.0.1:63630 - "POST /api/cancel?nickname=1243457 HTTP/1.1" 404
+[20:04:25] [INFO] [main] Попытка отмены заявки: 1
+[20:04:25] [INFO] [main] Заявка 1 удалена.
+[20:04:25] [INFO] [uvicorn.access] 127.0.0.1:63631 - "POST /api/cancel?nickname=1 HTTP/1.1" 200
+[20:04:31] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 2
+[20:04:31] [INFO] [main] Заявка от 2 сохранена.
+[20:04:31] [INFO] [uvicorn.access] 127.0.0.1:63639 - "POST /api/request HTTP/1.1" 200
+[20:04:37] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 23
+[20:04:37] [WARNING] [main] Попытка повторной заявки с IP 127.0.0.1
+[20:04:37] [INFO] [uvicorn.access] 127.0.0.1:63647 - "POST /api/request HTTP/1.1" 400
+[20:09:07] [INFO] [uvicorn.error] Shutting down
+[20:09:07] [INFO] [uvicorn.error] Waiting for application shutdown.
+[20:09:07] [INFO] [uvicorn.error] Application shutdown complete.
+[20:09:07] [INFO] [uvicorn.error] Finished server process [28444]

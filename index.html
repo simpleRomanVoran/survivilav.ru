@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SURVIVILAV</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -19,8 +22,8 @@
     <!-- Медиа-запросы -->
     <link rel="stylesheet" href="styles/media.css">
 
-
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+
 </head>
 <body class="body">
 
@@ -29,14 +32,31 @@
         
         <div class="left">
             <div class="box">
-                <div class="top bg-green">
+                <div class="top bg-green text_center">
                         СТРАНИЦЫ
                 </div>
-                <div class="content">
-                    <button class="button" onclick="managerPage.showExclusive ('center_main'); managerRightPage.showExclusive ('right_main');">Главная</button>
-                    <button class="button" onclick="managerPage.showExclusive ('center_blog'); managerRightPage.showExclusive ('right_blog');">Блог</button>
+                <div class="content left_static">
+                    <button class="button full" onclick="managerPage.showExclusive ('center_main'); managerRightPage.showExclusive ('right_main');">Главная</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_request'); managerRightPage.showExclusive ('right_request');">Заявки</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_rule'); managerRightPage.showExclusive ('right_rule');">Правила</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_project'); managerRightPage.showExclusive ('right_project');">О проекте</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_account'); managerRightPage.showExclusive ('right_account');">Аккаунт</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_contact'); managerRightPage.showExclusive ('right_contact');">Контакты</button>
                 </div>
             </div>
+            <!-- <div class="box">
+                <div class="top bg-green text_center">
+                        СТРАНИЦЫ
+                </div>
+                <div class="content left_dynamic">
+                    <button class="button full" onclick="managerPage.showExclusive ('center_main'); managerRightPage.showExclusive ('right_main');">Главная</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_request'); managerRightPage.showExclusive ('right_request');">Заявки</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_rule'); managerRightPage.showExclusive ('right_rule');">Правила</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_project'); managerRightPage.showExclusive ('right_project');">О проекте</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_account'); managerRightPage.showExclusive ('right_account');">Аккаунт</button>
+                    <button class="button full" onclick="managerPage.showExclusive ('center_contact'); managerRightPage.showExclusive ('right_contact');">Контакты</button>
+                </div>
+            </div> -->
         </div>
 
         <div class="center" id="center_main">
@@ -61,7 +81,7 @@
 
                     <p class="text">
                         
-                        <span class="yellow">Сурвивилав - </span> это экосистема и связка майнкрафт серверов. Основным который является ванила + войс чат сервер +
+                        <span class="yellow">Сурвивилав - </span> это экосистема и связка майнкрафт серверов. Основной которой является ванила + войс чат +
                         некоторые дополнительные плагины (в том числе не совсем ванильные).
 
                     </p>
@@ -71,88 +91,226 @@
             </div>
         </div>
 
-
-        <div class="center" id="center_blog">
+        <div class="center" id="center_request">
             <div class="box">
                 <div class="top bg-green">
-                    БЛОГИ
+                    ЗАЯВКИ
                 </div>
                 <div class="content">
-                    <p class="text_extra">Вступление</p>
-                    <p class="text">Страница создана: <span class="yellow">22.09.2025</span></p>
+<p class="text">Для получения доступа к серверу оставьте заявку (Не бойтесь писать правду, не оставляйте личные данные):</p>
+
+                    <p class="text">* Если вы хотите несколько аккаунтов/ников или у вас другая "особая" ситуация, расскажите о ней в: "О вас".</p>
+
+
+  <div class="component">
+    <p class="text">Ваш ник майнкрафт (лицензия - если есть):</p>
+    <input type="text" id="nickname" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Приглашение (ключ):</p>
+    <input type="text" id="invite" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">О вас (До 3000 символов):</p>
+    <textarea id="about" class="textarea_full textarea_big"></textarea>
+  </div>
+
+  <div class="component">
+    <p class="text">Ваш телеграмм (если нет, как связаться):</p>
+    <input type="text" id="telegram" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Ваша почта:</p>
+    <input type="text" id="email" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Как узнали о сервере:</p>
+    <input type="text" id="source" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Что ожидаете от проекта:</p>
+    <input type="text" id="expectations" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Ваш возраст:</p>
+    <input type="text" id="age" class="input">
+  </div>
+
+  <div class="component">
+    <p class="text">Осталось чуть-чуть:</p>
+    <button id="btn_clear" class="button">Стереть данные</button>
+    <button id="btn_cancel" class="button">Отменить заявку (по нику)</button>
+    <button id="btn_send" class="button">Отправить заявку</button>
+  </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="center" id="center_rule">
+            <div class="box">
+                <div class="top bg-green">
+                    ПРАВИЛА
+                </div>
+                <div class="content">
+
+
+                    <h1 class="text_extra">Правила сообщества</h1>
+                    <p class="text">Коротко и понятно — работают в Telegram-чате и на Minecraft‑сервере. Администрация решает споры.</p>
+
+                    <ul class="custom-list marker-triangle brand-violet text">
+                        <li>Уважай других — без оскорблений и унижений.</li>
+                        <li>Без спама, рекламы и повторных сообщений.</li>
+                        <li>Не публикуй NSFW и контент 18+.</li>
+                        <li>Не распространяй пиратский/незаконный контент и ссылки.</li>
+                        <li>Избегай обсуждений политики и религии.</li>
+                        <li>Не используй оскорбительные никнеймы и скины.</li>
+                        <li>Не кричи CAPS LOCK'ом и не мешай форматами.</li>
+                        <li>Игра — честно: без читов, дюпов и эксплойтов.</li>
+                        <li>Не грифи — уважай постройки и личное пространство.</li>
+                        <li>Не выдавай себя за администрацию.</li>
+                        <li>Используй каналы по назначению (вопросы, торговля и т.д.).</li>
+                        <li>Решай конфликты мирно — не провоцируй срачи.</li>
+                        <li>Соблюдай инструкции модераторов и админов.</li>
+                        <li>Нарушения ведут к предупреждениям, мутам или банам.</li>
+                        <li>Администрация вправе принять решение по любой ситуации.</li>
+                    </ul>
+
+
+                    <p class="text">При необходимости можем добавлять или изменять правила, так что иногда пересматривай :)</p>
+                            
+                </div>
+            </div>
+        </div>
+
+        <div class="center" id="center_project">
+            <div class="box">
+                <div class="top bg-green">
+                    О ПРОЕКТЕ
+                </div>
+                <div class="content">
+                    <p class="text_extra">О проекте</p>
                     <p class="text">
-                        Сейчас Сурвивилав переживает не самое лучшее время. Игроков мало, контента тоже, хостинги, постоянные вайпы и проблемы усложняют процесс игры.
+                        Всем привет! Добро пожаловать на страницу проекта <span class="yellow">Сурвивилав</span> — это не просто сервер, а целая экосистема Minecraft-миров.
                     </p>
                     <p class="text">
-                        Меня зовут Вячеслав - я действующий разработчик сервера начиная почти с самого начала. Я занимался разработкой логотипа,
-                        сайтов (этого в том числе), а так же разработкой большинства сборок (настройкой плагинов и решение проблем с ними). Но,
-                        сейчас времени на развитие проекта безумно нехватает, это связанно с личными причинами и тем что я поодерживаю другие
-                        свои проекты: <a href="https://slavik00.ru" class="link">slavik00.ru</a>
+                        Основу проекта составляет ванильное выживание с голосовым чатом и рядом продуманных дополнений, которые делают игру живой и атмосферной.
+                        Здесь ценится свобода, креатив и баланс между реализмом и фановостью.
                     </p>
                     <p class="text">
-                        Начался Сурвивилав не с меня, отцом основателем стал игрок под ником SDkY_ - создатель нескольких сборок и основной владелец проектом,
-                        Начался проект ещё на старой 1.12.2, с последующим переходом на 1.14.4 и так далее, сейчас мы поддерживаем самую последнюю версию игры.
+                        Проект начал свой путь с версии <span class="yellow">1.12.2 под руководством <b>SDkY_</b>, а сегодня поддерживает актуальные версии Minecraft.  </span>
+                        Разработкой занимаюсь я — <a href="https://slavik00.ru" target="_blank" class="link">Вячеслав</a>: создаю сборки, сайты и решаю технические задачи. Сейчас сервер переживает тихий период, но не останавливается.
                     </p>
-                    <p class="text_extra">О Будущем проекта</p>
+
+                    <p class="text_extra">Будущее</p>
                     <p class="text">
-                        В моём представлении "Сурвивилав" должен оставаться приватным, а так же должен иметь не только выживание, но и "особые режимы". Мне интересно
-                        создать такую систему, при которой игроки будут сами создавать "Режимы" с удобными инструментами, будь то "мини-игры", "выживание", "рп" и прочее.
-                        При этом не хочу оставлять наш основной режим - ванильное выживание, через чур ванильным. Хотелось бы разработать множество различных систем, интересно
-                        дополняющих игру: болезни и здоровья, прочка (как в жизни, без меню), микросхемы (с использованием обычного майнкрафт-редстоуна) и тому подобное.
+                        Мы хотим сделать Сурвивилав платформой, где игроки сами могут создавать собственные режимы: от выживания до мини-игр и ролевых сценариев.
+                        Главная цель — дать каждому инструмент для своего стиля игры, не перегружая интерфейс и не мешая атмосфере.
+                    </p>
+                    <p class="text">
+                        В планах — уникальные механики: система здоровья и болезней, реалистичная прокачка, микросхемы на редстоуне и даже пользовательские валюты.
+                    </p>
+                    <p class="text">
+                        Мы разделяем игроков по степени вовлечённости: <b>НЕ-РП</b>, <b>Полу-РП</b> и <b>РП</b> — чтобы каждый мог играть так, как комфортно именно ему.
+                    </p>
+
+                    <p class="text_extra">История и приглашение</p>
+                    <p class="text">
+                        За годы существования проект прошёл через разные версии и эпохи — <i>Neo</i>, <i>Bridge</i>, <i>1.12.2</i>, <i>1.14.4</i> и другие.
+                        Каждый сезон приносил что-то новое, и впереди — ещё больше интересных идей.
+                    </p>
+                    <p class="text">
+                        Если хочешь стать частью нашей истории — напиши на <a href="mailto:rakzarvoice@gmail.com" class="link">rakzarvoice@gmail.com</a> или перейди сюда: <button class="button" onclick="managerPage.showExclusive ('center_request'); managerRightPage.showExclusive ('right_request');">получить доступ</button>
+                        Присоединяйся, и пусть игра станет твоим новым приключением!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="center" id="center_account">
+            <div class="box">
+                <div class="top bg-green">
+                    АККАУНТ
+                </div>
+                <div class="content">
+
+                    <p class="text">
+                        
+                        <span class="yellow">Данная страница в разработке,</span>
+
+                    </p>
+                    <p class="text">
+                        
+                        На сайте сейчас нет функционала, где требовался бы аккаунт, используйте нашего телеграмм-бота.
+
+                    </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="center" id="center_contact">
+            <div class="box">
+                <div class="top bg-green">
+                    КОНТАКТЫ
+                </div>
+                <div class="content">
+
+
+                    <p class="text content_right">
+                        Для связи используйте мои контакты: <a href="slavik00.ru" class="link">slavik00.ru</a>
                     </p>
 
                     <p class="text">
-                        Моим основным принципом будет кастомизация и не напряжность - новые функции не должны отвлекать, но должны быть максимально агибаемыми, сохраняя индивидуальный
-                        подход игры каждого. Например, я считаю что на сервере не должно быть единственной онлайн валюты в не сервера (Например АРЫ - алмазная руда). А следует дать возможность
-                        каждому игроку создавать собственные валюты, возможно даже не привязанные не к алмазам, не к руде.
-                    </p>
+                        
+                        Или просто напишите на почту: rakzarvoice@gmail.com или через нашего бота.
 
-                    <p class="text">
-                        Я не хочу делать единные правила для всех. Я не раз в жизни видел ситуации где игроки натурально нарушают покой других игроков будучи друзьями или нет.
-                        Для того что бы не делать правила через чур сложными, хотелось бы разделить их на: "НЕ РП" (Игроков, кто не хотел бы участвовать в большинстве совместных игровых
-                        процессах - обворав или убит, закрыт в карцере или тому подобное). "Полу-РП" (Для игроков, которые не боятся смерти и других игровых процессов без перегибов), а так же
-                        "РП" (Для людей, готовых потерять всё, ради классной отыгровки или получения совершенно нового игрового опыта) - для перехода между режимами, потребуется время или одобрение
-                        администрации/модерации, что бы не было очевидных проблем, так же будут правила взаимодействия между группами.
-                    </p>
-
-                    <p class="text_extra">О прошлом и заключение</p>
-
-                    <p class="text">
-                        Сервер пережил несколько сезонов, в том числе и вынужденных: survivilav Neo, survivilav Bridge, survivilav 1.12.2 и 1.14.4 и
-                        так далее. Каждый из них был по своему немного уникальным, но в данный момент мы попробуем взять более изящный курс!
-                    </p>
-
-                    <p class="text">
-                        Для тех кто хочет остаться с нами, можете оставить свою заявку здесь: <a href="mailto:rakzarvoice@gmail.com" class="link">rakzarvoice@gmail.com</a> или подождать,
-                        через какое-то время на этом сайте появиться такая
-                        возможность. Если у вас остались какие-нибудь вопросы пишите туда же, рад буду ответить. Приятной игры :)
                     </p>
 
                     
                 </div>
             </div>
         </div>
-
+    
         <div class="right">
             <div class="box">
                 <div class="right_main" id="right_main">
                     
                 </div>
                 
-                <div class="right_blog" id="right_blog">
-                    <div class="content">
-                        <button class="button">Вступление (от 22.09.2025)</button>
-                    </div>
+                <div class="right_request" id="right_request">
+                    
+                </div>
+
+                <div class="right_rule" id="right_rule">
+                    
+                </div>
+
+                <div class="right_project" id="right_project">
+                    
+                </div>
+
+                <div class="right_account" id="right_account">
+                    
+                </div>
+
+                <div class="right_contact" id="right_contact">
+                    
                 </div>
             </div>
         </div>
 
-    </div>
-
     <div class="fixed white bg-red" id="fixed">
-        <div class="text_black">ОШИБКА!</div>
-        <div class="text" id="error_msg"></div>
-        <div class="button button_exit_fixed" onclick="managerPopup.hide ('fixed')">Понял</div>
+        <div class="text_black" id="fixed_heading"></div>
+        <div class="text" id="fixed_text"></div>
+        <div class="button button_exit_fixed" onclick="managerPopup.hide ('fixed')" id="fixed_button">Понял</div>
     </div>
 
     <script type="module" src="./scripts/index.js"></script>

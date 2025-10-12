@@ -26,7 +26,7 @@ base:
     - Текст
 
 containers - написан полностью chatGPT, я его не понимаю. Вот дока по его использованию:
-left, center - удалять нельзя! right - можно. (center займёт его место)
+left, center - удалять нельзя! right - можно. (center займёт его место) - все они внутри .page
 left center right
 .left .center .right
 

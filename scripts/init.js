@@ -2,9 +2,9 @@
 import Popuper from './popuper.js';
 
 const managerPage = new Popuper();
-managerPage.registerMany(["center_main", "center_blog"], "display", "flex");
+managerPage.registerMany(["center_main", "center_request", "center_rule", "center_project", "center_account", "center_contact"], "display", "flex");
 const managerRightPage = new Popuper();
-managerRightPage.registerMany(["right_main", "right_blog"], "display", "flex");
+managerRightPage.registerMany(["right_main", "right_request", "right_rule", "right_project", "right_account", "right_contact"], "display", "flex");
 const managerPopup = new Popuper();
 managerPopup.registerMany(["fixed"], "display", "block");
 

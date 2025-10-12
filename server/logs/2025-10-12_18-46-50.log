@@ -1,0 +1,15 @@
+[18:46:50] [INFO] [main] Запуск Survivilav API...
+Will watch for changes in these directories: ['G:\\projects\\survivilav_go\\website\\survivilav.ru']
+Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Started reloader process [27504] using StatReload
+Using selector: SelectSelector
+Started server process [25596]
+Waiting for application startup.
+Application startup complete.
+StatReload detected changes in 'server\main.py'. Reloading...
+Shutting down
+Waiting for application shutdown.
+Application shutdown complete.
+Finished server process [25596]
+StatReload detected changes in 'server\main.py'. Reloading...
+Stopping reloader process [27504]

@@ -1,0 +1,16 @@
+[20:11:52] [DEBUG] [asyncio] Using selector: SelectSelector
+[20:11:52] [INFO] [uvicorn.error] Started server process [27780]
+[20:11:52] [INFO] [uvicorn.error] Waiting for application startup.
+[20:11:52] [INFO] [uvicorn.error] Application startup complete.
+[20:12:20] [INFO] [uvicorn.access] 127.0.0.1:63811 - "OPTIONS /api/request HTTP/1.1" 200
+[20:12:20] [INFO] [main] Получена заявка от IP: 127.0.0.1, ник: 1222
+[20:12:20] [WARNING] [main] Заявка отклонена: приглашение 10 не найдено
+[20:12:20] [INFO] [uvicorn.access] 127.0.0.1:63811 - "POST /api/request HTTP/1.1" 400
+[20:12:59] [INFO] [uvicorn.access] 127.0.0.1:63817 - "GET /api/invite/create HTTP/1.1" 405
+[20:12:59] [INFO] [uvicorn.access] 127.0.0.1:63818 - "GET /favicon.ico HTTP/1.1" 404
+[20:13:02] [INFO] [uvicorn.access] 127.0.0.1:63817 - "GET /api/invite/create HTTP/1.1" 405
+[20:13:02] [INFO] [uvicorn.access] 127.0.0.1:63818 - "GET /favicon.ico HTTP/1.1" 404
+[20:13:08] [INFO] [uvicorn.error] Shutting down
+[20:13:08] [INFO] [uvicorn.error] Waiting for application shutdown.
+[20:13:08] [INFO] [uvicorn.error] Application shutdown complete.
+[20:13:08] [INFO] [uvicorn.error] Finished server process [27780]

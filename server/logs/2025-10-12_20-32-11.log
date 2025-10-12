@@ -1,0 +1,13 @@
+[20:32:11] [WARNING] [main] SURVIVILAV_ADMIN_KEY not set. Generated temporary admin key (log output).
+[20:32:11] [INFO] [main] Starting Survivilav API (uvicorn)...
+Will watch for changes in these directories: ['G:\\projects\\survivilav_go\\website\\survivilav.ru']
+Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Started reloader process [15648] using StatReload
+[20:32:11] [WARNING] [main] SURVIVILAV_ADMIN_KEY not set. Generated temporary admin key (log output).
+Using selector: SelectSelector
+[20:32:11] [WARNING] [main] SURVIVILAV_ADMIN_KEY not set. Generated temporary admin key (log output).
+Started server process [15924]
+Waiting for application startup.
+Application startup complete.
+[20:32:51] [INFO] [main] Received SIGINT signal — graceful shutdown
+Stopping reloader process [15648]

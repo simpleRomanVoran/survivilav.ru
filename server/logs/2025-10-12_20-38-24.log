@@ -1,0 +1,7 @@
+Using selector: SelectSelector
+Started server process [13432]
+Waiting for application startup.
+Application startup complete.
+[20:40:02] [INFO] [main] Validate invite called for code=AB12CD34
+[20:40:02] [INFO] [main] Invite not found: AB12CD34
+127.0.0.1:54371 - "GET /api/invite/validate?code=AB12CD34 HTTP/1.1" 404

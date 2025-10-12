@@ -17,8 +17,8 @@ function openText (heading, text, buttonText) {
     fixedTextButton.innerHTML = buttonText;
 }
 
-const API_IP = "127.0.0.1";
-const API_PORT = 8000;
+const API_IP = "api.survivilav.ru";
+const API_PORT = "";
 const API_BASE = `http://${API_IP}:${API_PORT}/api`;
 
 function getValue(id) {

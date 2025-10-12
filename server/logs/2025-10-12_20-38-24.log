@@ -5,3 +5,33 @@ Application startup complete.
 [20:40:02] [INFO] [main] Validate invite called for code=AB12CD34
 [20:40:02] [INFO] [main] Invite not found: AB12CD34
 127.0.0.1:54371 - "GET /api/invite/validate?code=AB12CD34 HTTP/1.1" 404
+127.0.0.1:60781 - "OPTIONS /api/request HTTP/1.1" 200
+[21:13:48] [INFO] [main] Request received from IP=127.0.0.1 nickname='100' invite='1'
+[21:13:48] [INFO] [main] Invite not found: 1
+127.0.0.1:60781 - "POST /api/request HTTP/1.1" 400
+127.0.0.1:54781 - "OPTIONS /api/request HTTP/1.1" 200
+[21:30:59] [INFO] [main] Request received from IP=127.0.0.1 nickname='Roman_Voran' invite='MD65WVXE'
+[21:30:59] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54781 - "POST /api/request HTTP/1.1" 400
+[21:31:24] [INFO] [main] Request received from IP=127.0.0.1 nickname='Roman_Voran' invite='MD65WVXE'
+[21:31:24] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54784 - "POST /api/request HTTP/1.1" 400
+[21:32:46] [INFO] [main] Request received from IP=127.0.0.1 nickname='Roman_Voran' invite='MD65WVXE'
+[21:32:46] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54789 - "POST /api/request HTTP/1.1" 400
+[21:33:45] [INFO] [main] Request received from IP=127.0.0.1 nickname='Roman_Voran' invite='MD65WVXE'
+[21:33:45] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54792 - "POST /api/request HTTP/1.1" 400
+[21:34:04] [INFO] [main] Request received from IP=127.0.0.1 nickname='admin' invite='MD65WVXE'
+[21:34:04] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54793 - "POST /api/request HTTP/1.1" 400
+[21:36:20] [INFO] [main] Request received from IP=127.0.0.1 nickname='admin' invite='MD65WVXE'
+[21:36:20] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54812 - "POST /api/request HTTP/1.1" 400
+[21:36:24] [INFO] [main] Cancel request called for nickname=admin
+[21:36:24] [WARNING] [main] Cancel failed: nickname not found: admin
+127.0.0.1:54812 - "POST /api/cancel?nickname=admin HTTP/1.1" 404
+[21:36:27] [INFO] [main] Request received from IP=127.0.0.1 nickname='admin' invite='MD65WVXE'
+[21:36:27] [INFO] [main] Invite not found: MD65WVXE
+127.0.0.1:54812 - "POST /api/request HTTP/1.1" 400
+[21:36:35] [INFO] [main] Received SIGINT signal — graceful shutdown

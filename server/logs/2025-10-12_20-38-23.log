@@ -2,3 +2,4 @@
 Will watch for changes in these directories: ['G:\\projects\\survivilav_go\\website\\survivilav.ru']
 Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 Started reloader process [27400] using StatReload
+Stopping reloader process [27400]

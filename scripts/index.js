@@ -19,16 +19,17 @@ function openText (heading, text, buttonText) {
 
 // DEVELOPMENT MODE
 const DEV_MODE = false;
+let API_BASE = "";
 
 if (DEV_MODE == false) {
   const API_IP = "api.survivilav.ru";
   const API_PORT = "";
-  const API_BASE = `${window.location.protocol}://${API_IP}/api`;
+  API_BASE = `${window.location.protocol}://${API_IP}/api`;
 }
 else {
   const API_IP = "0.0.0.0";
   const API_PORT = "8000";
-  const API_BASE = `http://${API_IP}:${API_PORT}/api`;
+  API_BASE = `http://${API_IP}:${API_PORT}/api`;
 }
 
 function getValue(id) {

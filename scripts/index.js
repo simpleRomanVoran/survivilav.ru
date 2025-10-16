@@ -18,8 +18,8 @@ function openText (heading, text, buttonText) {
 }
 
 const API_IP = "api.survivilav.ru";
-const API_PORT = "";
-const API_BASE = `http://${API_IP}:${API_PORT}/api`;
+const API_PORT = "8000";
+const API_BASE = `https://${API_IP}:${API_PORT}/api`;
 
 function getValue(id) {
   return document.getElementById(id).value.trim();

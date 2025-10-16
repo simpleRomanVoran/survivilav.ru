@@ -17,6 +17,7 @@ function openText (heading, text, buttonText) {
     fixedTextButton.innerHTML = buttonText;
 }
 
+// DEVELOPMENT MODE
 const DEV_MODE = false;
 
 if (DEV_MODE == false) {
